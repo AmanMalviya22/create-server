@@ -3,8 +3,9 @@
 
 
  function requestHandler(req,res){
-    console.log(req.url);
-    res.end("Gotcah!");
+    // console.log(req.url);
+    res.writeHead(200,{'content-type':'text/html'});
+    res.end('<h1>Gotcah!</h1>');
  }
 
  const server=http.createServer(requestHandler);
